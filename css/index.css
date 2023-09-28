@@ -1,0 +1,317 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* color */
+/* font-size */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header .web_title {
+  background-color: #fdf8ec;
+  text-align: center;
+  padding: 25px;
+}
+header .web_title h1 {
+  font-family: Harlow Solid;
+  font-size: 52px;
+}
+
+.bar {
+  max-width: 1920px;
+  background-color: #7a6048;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+.bar #artist {
+  max-width: 200px;
+  padding: 20px 10px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.bar #artist .artist-name {
+  height: 80px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar #artist .artist-name h4 {
+  color: #fdf8ec;
+  text-align: center;
+  font-family: comic sans ms;
+  font-size: 26px;
+}
+.bar #artist .pic {
+  overflow: hidden;
+  border-radius: 50px 5px 0px 0px;
+}
+.bar #artist .pic .picture {
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+.bar #artist .pic .picture:hover {
+  transform: scale(1.2);
+  transition: 0.8s;
+}
+.bar #artist .button {
+  border-radius: 0px 0px 5px 5px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d5c4a9;
+  width: 100%;
+}
+.bar #artist .button .btn_painter {
+  font-family: cambria;
+  font-size: 24px;
+  text-align: center;
+  padding: 15px;
+  float: left;
+  cursor: pointer;
+}
+.bar #artist .button:hover {
+  color: brown;
+  background-color: #fae19d;
+}
+.bar .i-bg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(122, 96, 72, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.bar #i1,
+.bar #i2,
+.bar #i3,
+.bar #i4,
+.bar #i5 {
+  display: none;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #d5c4a9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bar #i1 #introTitle,
+.bar #i2 #introTitle,
+.bar #i3 #introTitle,
+.bar #i4 #introTitle,
+.bar #i5 #introTitle {
+  font-weight: bold;
+  font-family: comic sans ms;
+  font-size: 20px;
+}
+.bar #i1 .introTitle_btn,
+.bar #i2 .introTitle_btn,
+.bar #i3 .introTitle_btn,
+.bar #i4 .introTitle_btn,
+.bar #i5 .introTitle_btn {
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 4px;
+  cursor: pointer;
+  color: #fdf8ec;
+  background-color: #7a6048;
+}
+.bar #i1 .introTitle_btn:hover,
+.bar #i2 .introTitle_btn:hover,
+.bar #i3 .introTitle_btn:hover,
+.bar #i4 .introTitle_btn:hover,
+.bar #i5 .introTitle_btn:hover {
+  color: #7a6048;
+  background-color: #fdf8ec;
+}
+.bar #i1 [id^=close],
+.bar #i2 [id^=close],
+.bar #i3 [id^=close],
+.bar #i4 [id^=close],
+.bar #i5 [id^=close] {
+  float: right;
+}
+.bar #i1 [id^=arwk],
+.bar #i2 [id^=arwk],
+.bar #i3 [id^=arwk],
+.bar #i4 [id^=arwk],
+.bar #i5 [id^=arwk] {
+  float: left;
+}
+
+.content {
+  padding: 15px 0;
+  background-color: #fdf8ec;
+  max-width: 1920px;
+  height: auto;
+}
+.content #carouselExampleFade {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #d5c4a9;
+  color: #7a6048;
+  text-align: center;
+  padding: 15px;
+  height: 60px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  header .web_title {
+    padding: 12px;
+  }
+  header .web_title h1 {
+    font-size: 40px;
+  }
+  .bar {
+    max-width: 767px;
+    padding: 0 5%;
+  }
+  .bar #artist {
+    max-width: 250px;
+    padding: 20px 20px;
+  }
+  .bar #artist .artist-name h4 {
+    font-size: 24px;
+  }
+  .bar #i1,
+  .bar #i2,
+  .bar #i3,
+  .bar #i4,
+  .bar #i5 {
+    max-width: 450px;
+    width: 80%;
+    overflow: auto;
+  }
+  .content {
+    max-width: 767px;
+  }
+  .content #carouselExampleFade {
+    max-width: 80%;
+  }
+}
+@media (max-width: 414px) {
+  header .web_title {
+    padding: 10px;
+  }
+  header .web_title h1 {
+    font-size: 26px;
+  }
+  .bar #artist .pic .picture:active {
+    transform: scale(1.2);
+    transition: 0.8s;
+  }
+  .bar #artist .button:active {
+    color: brown;
+    background-color: #fae19d;
+  }
+  .bar #i1,
+  .bar #i2,
+  .bar #i3,
+  .bar #i4,
+  .bar #i5 {
+    width: 90%;
+    height: 450px;
+    overflow: auto;
+  }
+  .bar #i1 [id^=close],
+  .bar #i1 [id^=arwk],
+  .bar #i2 [id^=close],
+  .bar #i2 [id^=arwk],
+  .bar #i3 [id^=close],
+  .bar #i3 [id^=arwk],
+  .bar #i4 [id^=close],
+  .bar #i4 [id^=arwk],
+  .bar #i5 [id^=close],
+  .bar #i5 [id^=arwk] {
+    float: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .content {
+    max-width: 414px;
+  }
+  .content #carouselExampleFade {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

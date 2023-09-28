@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>We got art!</title>
+  <link rel="stylesheet" href="css/PaintPage.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/PaintPage.js"></script>
+</head>
+
+<body>
+  <!--愛心購物車、對話框icon-->
+  <img class="msg" src="SRC/icon/message.png" ;>
+  <img class="car" src="SRC/icon/love_car.png" ;>
+
+  <!--愛心購物車-->
+  <div id="collect">
+    <div id="col-1">
+      <div class="Heart" id="1_heart">
+        <h3 title="Click to see your favorite paint!!">Sandro Botticelli</h3>
+      </div>
+      <div id="P1"></div>
+    </div>
+    <hr>
+    <div id="col-2">
+      <div class="Heart" id="2_heart">
+        <h3 title="Click to see your favorite paint!!">van Gogh</h3>
+      </div>
+      <div id="P2"></div>
+    </div>
+    <hr>
+    <div id="col-3">
+      <div class="Heart" id="3_heart">
+        <h3 title="Click to see your favorite paint!!">DaVinci</h3>
+      </div>
+      <div id="P3"></div>
+    </div>
+    <hr>
+    <div id="col-4">
+      <div class="Heart" id="4_heart">
+        <h3 title="Click to see your favorite paint!!">Jan Vermeer</h3>
+      </div>
+      <div id="P4"></div>
+    </div>
+    <hr>
+    <div id="col-5">
+      <div class="Heart" id="5_heart">
+        <h3>Raphael</h3>
+      </div>
+      <div id="P5"></div>
+    </div>
+  </div>
+
+  <!--對話框-->
+  <div id="hello">
+    <p id=paintername1></p>
+    <div id="talk1">
+      <div class="talk-intro">
+        <img class="picture" src="SRC/IMG/artist png/Sandro.png">
+        <div class="btntalk">Hi! I'm Sandro Botticelli.</div>
+      </div>
+      <br><br>
+    </div>
+    <div id="talkclick">
+      <button class="btntalk" id="hi1">hi!!</button>
+      <button class="btntalk" id="live1">where are you from?</button>
+      <button class="btntalk" id="how1">how are you?</button>
+    </div>
+  </div>
+
+  <!--introduction dialog-->
+  <div id="dialog" title="">
+    <div id="artname">L'Adorazione dei Magi 三王朝拜</div>
+    <div id="introduction">
+      描繪了耶穌降生後東方三博士來朝拜的一角：伯利恆上空出現一顆奇亮的星星，三博士測知將有救世主降生，他們就攜帶禮物與眾家人，有那奇亮的星星尋來的方向，並在伯利恆找到剛生下的小耶穌。傳統但宗教信仰在不同的人物千差萬別構圖，總是有學識淵博的博士與小耶穌。
+    </div>
+    <button>關閉</button>
+  </div>
+
+  <!--header-->
+  <header>
+    <div class="web_title">
+      <h1>We Got Art</h1>
+      <a><img src="./SRC/icon/navigation-menu.svg" alt="menu" id="menu"></a>
+    </div>
+  </header>
+
+  <div class="all">
+    <!--不同畫家畫作頁面tab-->
+    <div id="tabs">
+      <ul>
+        <li id="tab-li-1"><a href="#tabs-1" id="ui-id-1">Sandro Botticelli</a></li>
+        <li id="tab-li-2"><a href="#tabs-2" id="ui-id-2">van Gogh</a></li>
+        <li id="tab-li-3"><a href="#tabs-3" id="ui-id-3">DaVinci</a></li>
+        <li id="tab-li-4"><a href="#tabs-4" id="ui-id-4">Jan Vermeer</a></li>
+        <li id="tab-li-5"><a href="#tabs-5" id="ui-id-5">Raphael</a></li>
+      </ul>
+
+      <div id="tabs-1">
+        <div class="tabs-painter">
+          <div class="tab-left">
+            <img src="SRC/IMG/painters protrait/Sandro_Botticelli.jpg" alt="">
+          </div>
+          <div class="tab-right">
+            <h1 class="title">Sandro Botticelli</h1>
+            <p>1445 ~ 1510 (Italian)
+              在 15 世紀 80 年代和 90 年代，波提且利是佛羅倫斯最出名的藝術家。他的風格到了 19 世紀，又被大力推崇，而且被認為是拉斐爾的前奏。
+              他宗教人文主義思想明顯，充滿世俗精神，代表作有《三王來拜》、《聖塞巴斯蒂安》等。後期的繪畫中又增加了許多以古典神話為題材的作品，風格典雅、秀美，特別是他大量採用教會反對的異教題材，大膽地畫全裸的人物，</p>
+          </div>
+        </div>
+        <div class="allwork">
+          <div class="allpaint">
+            <h3>Venus</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Sandro Botticelli/Venus.jpg" alt="Sandro Botticelli">
+            <br>
+            <img class="love" id="heart1" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro1">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>Primavera</h3>
+            <img class="picture" id="pic-maxW1" src="SRC/IMG/painter's paints/Sandro Botticelli/Primavera.jpg"
+              alt="Sandro Botticelli">
+            <br>
+            <img class="love" id="heart2" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro2">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>Nascita di Venere</h3>
+            <img class="picture" id="pic-maxW2" src="SRC/IMG/painter's paints/Sandro Botticelli/Nascita di Venere.jpg"
+              alt="Sandro Botticelli">
+            <br>
+            <img class="love" id="heart3" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro3">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>L'Adorazione dei Magi</h3>
+            <img class="picture" id="pic-maxW3"
+              src="SRC/IMG/painter's paints/Sandro Botticelli/L'Adorazione dei Magi.jpg" alt="Sandro Botticelli">
+            <br>
+            <img class="love" id="heart4" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro4">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>mythological painting</h3>
+            <img class="picture" id="picBig" src="SRC/IMG/painter's paints/Sandro Botticelli/mythological painting.jpg"
+              alt="Sandro Botticelli">
+            <br>
+            <img class="love" id="heart5" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro5">Introduction</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tabs-2">
+        <div class="tabs-painter">
+          <div class="tab-left">
+            <img src="SRC/IMG/painters protrait/Vincent_van_Gogh_.jpg" alt="">
+          </div>
+          <div class="tab-right">
+            <h1 class="title">van Gogh</h1>
+            <p>
+              1853 ~ 1890 (Dutch)
+              梵谷受到林布蘭特、德拉克窪的影響，強調他自己的主觀世界。造形與素材、光線與陰影、氣氛和遠近感，梵谷想把這些要素完全綜合的表現出來。這種思想使他總想畫出強烈的陽光，同時這種大膽的畫法，修正了印象派的單面性的描繪，給予後來的野獸派及表現主義很大的影響。
+              早期作品受印象主義影響，曾兩次在咖啡館和飯館等地向勞工階層展出自己的作品。不久厭倦巴黎生活，來到法國南部的阿爾，開始追求更有表現力的技巧；同時受革新文藝思潮的推動和日本繪畫的啟發，大膽探索自由抒發內心感受的風格，以達到線和色彩的自身表現力和畫面的裝飾性、寓意性。
+            </p>
+          </div>
+        </div>
+        <div class="allwork">
+          <div class="allpaint">
+            <h3>割掉耳朵後的自畫像</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/van Gogh/割掉耳朵後的自畫像.jpg" alt="van Gogh">
+            <br>
+            <img class="love" id="heart6" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro6">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>夜晚露天咖啡座</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/van Gogh/夜晚露天咖啡座.jpg" alt="van Gogh">
+            <br>
+            <img class="love" id="heart7" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro7">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>十五朵向日葵</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/van Gogh/十五朵向日葵.jpg" alt="van Gogh">
+            <br>
+            <img class="love" id="heart8" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro8">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>星夜</h3>
+            <img class="picture" id="pic-maxW4" src="SRC/IMG/painter's paints/van Gogh/星夜.jpg" alt="van Gogh">
+            <br>
+            <img class="love" id="heart9" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro9">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>吃土豆的人</h3>
+            <img class="picture" id="pic-maxW5" src="SRC/IMG/painter's paints/van Gogh/吃土豆的人.jpg" alt="van Gogh">
+            <br>
+            <img class="love" id="heart10" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro10">Introduction</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tabs-3">
+        <div class="tabs-painter">
+          <div class="tab-left">
+            <img src="SRC/IMG/painters protrait/01-leonardo-da-vinci-book-talk.jpg" alt="">
+          </div>
+          <div class="tab-right">
+            <h1 class="title">DaVinci</h1>
+            <p>
+              1452 ~ 1519 (Italian)
+              義大利文藝復興三傑之一，也是整個歐洲文藝復興時期最完美的代表。他是一位思想深邃，學識淵博，多才多藝的畫家、寓言家、雕塑家、發明家、哲學家、音樂家、醫學家、生物學家、地理學家、建築工程師和軍事工程師。
+              他是一位天才，他一面熱心於藝術創作和理論研究，研究如何用線條與立體造型去表現形體的各種問題；另一方面他也同時研究自然科學，為了真實感人的藝術形象，他廣泛地研究與繪畫有關的光學、數學、地質學、生物學等多種學科。達文西的藝術實踐和科學探索精神對後代產生了重大而深遠的影響，科學理念和藝術的結合，超越其時代一世紀以上。
+            </p>
+          </div>
+        </div>
+        <div class="allwork">
+          <div class="allpaint">
+            <h3>達文西自畫像</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Da vinci/達文西自畫像1.jpg" alt="DaVinci">
+            <br>
+            <img class="love" id="heart11" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro11">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>蒙娜麗莎</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Da vinci/蒙娜麗莎2.jpg" alt="DaVinci">
+            <br>
+            <img class="love" id="heart12" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro12">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>安吉里之戰</h3>
+            <img class="picture" id="pic-maxW6" src="SRC/IMG/painter's paints/Da vinci/安吉里之戰5.jpg" alt="DaVinci">
+            <br>
+            <img class="love" id="heart13" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro13">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>抱貂女郎</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Da vinci/抱貂女郎3.jpg" alt="DaVinci">
+            <br>
+            <img class="love" id="heart14" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro14">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>最後的晚餐</h3>
+            <img class="picture" id="picBig" src="SRC/IMG/painter's paints/Da vinci/最後的晚餐4.jpg" alt="DaVinci">
+            <br>
+            <img class="love" id="heart15" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro15">Introduction</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tabs-4">
+        <div class="tabs-painter">
+          <div class="tab-left">
+            <img src="SRC/IMG/painters protrait/Jan Vermeer.jpg" alt="">
+          </div>
+          <div class="tab-right">
+            <h1 class="title">Jan Vermeer</h1>
+            <p>
+              1632 ~ 1675 (Dutch)
+              荷蘭黃金時代繪畫大師，被看作“荷蘭小畫派”的代表畫家，但卻被人遺忘了長達兩個世紀之久。與梵谷、林布蘭特合稱荷蘭三大畫家。
+              作品大多是風俗題材的繪畫，基本上取材於市民平常的生活。他的畫整個畫面溫馨、舒適、寧靜，給人以莊重的感受，充分表現出了荷蘭市民那種對潔淨環境和優雅舒適的氣氛的喜好。在藝術風格上也別具特色，繪畫形體結實、結構精緻，色彩明朗和諧，尤善於表現室內光線和空間感。他的繪畫給人一種真實性，除了日常生活中的真實之外還使人感到一種信仰上的真實感。
+            </p>
+          </div>
+        </div>
+        <div class="allwork">
+          <div class="allpaint">
+            <h3>Het meisje met de parel</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Jan Vermeer/Het meisje met de parel.jpg"
+              alt="Jan Vermeer">
+            <br>
+            <img class="love" id="heart16" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro16">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>De Melkmeid</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Jan Vermeer/De Melkmeid.jpg" alt="Jan Vermeer" ;
+              height="400px">
+            <br>
+            <img class="love" id="heart17" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro17">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>Femme tenant un luth</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Jan Vermeer/Femme tenant un luth.jpg" alt="Jan Vermeer" ;
+              height="400px">
+            <br>
+            <img class="love" id="heart18" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro18">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>A Maid Asleep</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Jan Vermeer/A Maid Asleep.jpg" alt="Jan Vermeer" ;
+              height="400px">
+            <br>
+            <img class="love" id="heart19" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro19">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>Het glas wijn</h3>
+            <img class="picture" id="pic-maxW7" src="SRC/IMG/painter's paints/Jan Vermeer/Het glas wijn2.jpg"
+              alt="Jan Vermeer" ; height="400px">
+            <br>
+            <img class="love" id="heart20" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro20">Introduction</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tabs-5">
+        <div class="tabs-painter">
+          <div class="tab-left">
+            <img src="SRC/IMG/painters protrait/Raphael.jpg" alt="">
+          </div>
+          <div class="tab-right">
+            <h1 class="title">Raphael</h1>
+            <p>
+              1483 ~ 1520 (Italian)
+              義大利文藝復興初期的繪畫及建築大師，以羅馬梵諦岡的聖母像最為人所推崇。天才橫溢的吸收任何他所看、所經歷、所被教導的事物，能快速的轉換為他所擁有。與 Leonardo、Michelangelo 和 Titian
+              相比，他無疑是當時最出名的一位。
+              他的著名宗教畫聖母系列將宗教的虔誠和非宗教的美貌有機地融為一體；他的畫即使是《聖喬治大戰惡龍》的場面看起來也是平靜安詳的。他為梵蒂岡教宗居室創作的大型壁畫《雅典學園》是經典之作，他將柏拉圖和亞裡斯多德，將基督教和異教，統統融合在一起，創造出和諧的場面。
+            </p>
+          </div>
+        </div>
+        <div class="allwork">
+          <div class="allpaint">
+            <h3>聖喬治大戰惡龍</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Raphael/聖喬治大戰惡龍.jpg" alt="Raphael">
+            <br>
+            <img class="love" id="heart21" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro21">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>聖母子與施洗者約翰</h3>
+            <img class="picture" src="SRC/IMG/painter's paints/Raphael/聖母子與施洗者約翰1.jpg" alt="Raphael">
+            <br>
+            <img class="love" id="heart22" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro22">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>基督被解下十字架</h3>
+            <img class="picture" id="pic-maxW8" src="SRC/IMG/painter's paints/Raphael/基督被解下十字架2.jpg" alt="Raphael">
+            <br>
+            <img class="love" id="heart23" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro23">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>雅典學派</h3>
+            <img class="picture" id="pic-maxW9" src="SRC/IMG/painter's paints/Raphael/雅典學派.jpg" alt="Raphael">
+            <br>
+            <img class="love" id="heart24" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro24">Introduction</button>
+          </div>
+          <div class="allpaint">
+            <h3>聖禮的辯論</h3>
+            <img class="picture" id="pic-maxW10" src="SRC/IMG/painter's paints/Raphael/聖禮的辯論.jpg" alt="Raphael">
+            <br>
+            <img class="love" id="heart25" src="SRC/icon/heartunfull.png">
+            <img class="share" src="SRC/icon/share-option.png">
+            <br>
+            <button class="btnmar" id="intro25">Introduction</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <div>
+        <p>Copyright @ 2021-2023 </p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

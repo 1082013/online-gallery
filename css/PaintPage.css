@@ -1,0 +1,690 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* color */
+/* font-size */
+#tabs [id^=tabs-] .allwork .allpaint .btnmar:hover, #hello #talkclick .btntalk:hover {
+  transform: scale(1.3);
+}
+
+#tabs [id^=tabs-] .allwork .allpaint .picture, #hello #talk1 .talk-intro .picture,
+#hello #talk2 .talk-intro .picture,
+#hello #talk3 .talk-intro .picture,
+#hello #talk4 .talk-intro .picture,
+#hello #talk5 .talk-intro .picture {
+  float: left;
+}
+
+#tabs [id^=tabs-] .allwork .allpaint .picture {
+  height: 350px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(253, 248, 236);
+}
+
+.car,
+.msg {
+  width: 55px;
+  transition: all 0.3s;
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+}
+.car:hover,
+.msg:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.car {
+  right: 90px;
+}
+
+.msg {
+  right: 15px;
+}
+
+#collect {
+  position: fixed;
+  bottom: 100px;
+  right: 90px;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 8px;
+  width: 300px;
+  display: none;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+#collect [id^=col-] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#collect [id^=col-] .Heart {
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+}
+
+#hello {
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 8px;
+  width: 320px;
+  height: 430px;
+  display: none;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+#hello #paintername1 {
+  height: 20px;
+  margin: 5px 0;
+  text-align: center;
+}
+#hello #paintername2 {
+  height: 20px;
+  margin: 5px 0;
+  text-align: center;
+}
+#hello #paintername3 {
+  height: 20px;
+  margin: 5px 0;
+  text-align: center;
+}
+#hello #paintername4 {
+  height: 20px;
+  margin: 5px 0;
+  text-align: center;
+}
+#hello #paintername5 {
+  height: 20px;
+  margin: 5px 0;
+  text-align: center;
+}
+#hello #talk1,
+#hello #talk2,
+#hello #talk3,
+#hello #talk4,
+#hello #talk5 {
+  border: 2px solid darkgoldenrod;
+  border-radius: 5px;
+  overflow: auto;
+  height: 320px;
+}
+#hello #talk1 .talk-intro,
+#hello #talk2 .talk-intro,
+#hello #talk3 .talk-intro,
+#hello #talk4 .talk-intro,
+#hello #talk5 .talk-intro {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#hello #talk1 .talk-intro .picture,
+#hello #talk2 .talk-intro .picture,
+#hello #talk3 .talk-intro .picture,
+#hello #talk4 .talk-intro .picture,
+#hello #talk5 .talk-intro .picture {
+  width: 75px;
+  height: 100px;
+}
+#hello #talkclick {
+  margin-top: 20px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#hello #talkclick .btntalk {
+  padding: 5px;
+  color: antiquewhite;
+  background-color: darkgoldenrod;
+  border-radius: 5px;
+  border: 0px;
+  margin: 1px;
+  cursor: pointer;
+}
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
+  display: none;
+  border: 0px;
+}
+
+[id^=dialog] {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  padding: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+[id^=dialog] #artname {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+[id^=dialog] #introduction {
+  width: 500px;
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 20px;
+}
+[id^=dialog] button {
+  float: right;
+}
+
+header .web_title {
+  background-color: #d5c4a9;
+  text-align: center;
+  padding: 25px;
+  cursor: pointer;
+  position: relative;
+}
+header .web_title h1 {
+  font-family: Harlow Solid;
+  font-size: 52px;
+  margin: 0 40px;
+  width: 0 200px;
+}
+header .web_title a {
+  display: none;
+}
+header .web_title a #menu {
+  color: #7a6048;
+  width: 30px;
+  margin: 10px 20px;
+  position: absolute;
+  right: 0px;
+  top: -2px;
+  z-index: 10;
+}
+
+#tabs {
+  width: 100%;
+  margin: auto;
+}
+#tabs ul {
+  background-color: #7a6048;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#tabs ul li {
+  padding: 0 25px;
+}
+#tabs ul li a {
+  color: #fdf8ec;
+  font-size: 24px;
+  font-family: Palatino Linotype;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+}
+#tabs ul li a:hover::before {
+  content: "◆　";
+  font-size: 15px;
+  position: absolute;
+  left: -20px;
+  top: 15px;
+  color: lightsalmon;
+}
+#tabs [id^=tabs-] {
+  width: 80%;
+  margin: 0 auto;
+}
+#tabs [id^=tabs-] .tabs-painter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: #d5c4a9 solid 2px;
+  border-top: #d5c4a9 solid 2px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgba(213, 196, 169, 0.5);
+  margin-bottom: 50px;
+}
+#tabs [id^=tabs-] .tabs-painter .tab-left {
+  padding: 10px;
+}
+#tabs [id^=tabs-] .tabs-painter .tab-left img {
+  width: 200px;
+  border-radius: 5px;
+}
+#tabs [id^=tabs-] .tabs-painter .tab-right {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#tabs [id^=tabs-] .tabs-painter .tab-right .title {
+  font-size: 30px;
+  color: #7a6048;
+  font-family: comic sans ms;
+  text-decoration-line: underline;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+#tabs [id^=tabs-] .tabs-painter .tab-right p {
+  line-height: 1.5;
+  padding: 15px;
+}
+#tabs [id^=tabs-] .allwork {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#tabs [id^=tabs-] .allwork .allpaint {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+#tabs [id^=tabs-] .allwork .allpaint h3 {
+  font-size: 20px;
+  color: #7a6048;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#tabs [id^=tabs-] .allwork .allpaint .picture {
+  padding: 0 10px;
+}
+#tabs [id^=tabs-] .allwork .allpaint #picBig {
+  width: 750px;
+  max-width: 100%;
+  height: auto;
+}
+#tabs [id^=tabs-] .allwork .allpaint .share,
+#tabs [id^=tabs-] .allwork .allpaint .love {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  float: left;
+  cursor: pointer;
+}
+#tabs [id^=tabs-] .allwork .allpaint .btnmar {
+  margin: 10px;
+  float: right;
+  color: #7a6048;
+  border: 1px solid #7a6048;
+  border-radius: 3px;
+  padding: 3px 8px 3px 8px;
+  transition: all 0.3s;
+}
+footer {
+  background-color: #d5c4a9;
+  color: #7a6048;
+  text-align: center;
+  padding: 15px;
+  height: 60px;
+  width: 100%;
+}
+
+.smallpicture {
+  width: 120px;
+  margin: 5px;
+}
+
+.hrtcart {
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+}
+
+.btntalk {
+  padding: 5px;
+  color: antiquewhite;
+  background-color: darkgoldenrod;
+  border-radius: 5px;
+  border: 0px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW10, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW9, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW8, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW7, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW6, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW5, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW4, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW3, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW2, #tabs [id^=tabs-] .allwork .allpaint #pic-maxW1 {
+    width: 100%;
+    height: auto;
+  }
+  header .web_title {
+    padding: 12px;
+  }
+  header .web_title h1 {
+    font-size: 40px;
+  }
+  [id^=dialog] {
+    padding: 20px;
+  }
+  [id^=dialog] #artname {
+    width: 300px;
+  }
+  [id^=dialog] #introduction {
+    width: 300px;
+  }
+  #tabs ul {
+    flex-wrap: wrap;
+  }
+  #tabs ul li {
+    padding: 0 25px;
+  }
+  #tabs ul li a {
+    font-size: 20px;
+  }
+  #tabs [id^=tabs-] {
+    width: 92%;
+  }
+  #tabs [id^=tabs-] .tabs-painter {
+    flex-direction: column;
+  }
+  #tabs [id^=tabs-] .tabs-painter .tab-left img {
+    max-width: 100%;
+  }
+  #tabs [id^=tabs-] .tabs-painter .tab-right .title {
+    font-size: 22px;
+    text-align: center;
+  }
+  #tabs [id^=tabs-] .tabs-painter .tab-right::after {
+    content: "";
+  }
+  #tabs [id^=tabs-] .allwork {
+    width: 100%;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW1 {
+    max-width: 532px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW2 {
+    max-width: 595px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW3 {
+    max-width: 429px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW4 {
+    max-width: 441.7px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW5 {
+    max-width: 496px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW6 {
+    max-width: 480px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW7 {
+    max-width: 408.8px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW8 {
+    max-width: 400px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW9 {
+    max-width: 451px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint #pic-maxW10 {
+    max-width: 493.6px;
+  }
+}
+@media (max-width: 414px) {
+  .car,
+  .msg {
+    width: 44px;
+  }
+  .car {
+    bottom: 70px;
+    right: 15px;
+  }
+  #collect {
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: 2px -1px 10px 5px rgba(0, 0, 0, 0.1);
+  }
+  #hello {
+    width: 95%;
+    height: 480px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
+  #hello #talkclick {
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  #hello #talkclick #hi1,
+  #hello #talkclick #live1,
+  #hello #talkclick #how1 {
+    width: 90%;
+  }
+  #hello #talkclick #hi1:hover,
+  #hello #talkclick #live1:hover,
+  #hello #talkclick #how1:hover {
+    transform: scale(1);
+  }
+  #hello #talkclick #hi1:active,
+  #hello #talkclick #live1:active,
+  #hello #talkclick #how1:active {
+    color: white;
+    background-color: #7a6048;
+  }
+  #hello #talkclick #hi2,
+  #hello #talkclick #live2,
+  #hello #talkclick #how2 {
+    width: 90%;
+  }
+  #hello #talkclick #hi2:hover,
+  #hello #talkclick #live2:hover,
+  #hello #talkclick #how2:hover {
+    transform: scale(1);
+  }
+  #hello #talkclick #hi2:active,
+  #hello #talkclick #live2:active,
+  #hello #talkclick #how2:active {
+    color: white;
+    background-color: #7a6048;
+  }
+  #hello #talkclick #hi3,
+  #hello #talkclick #live3,
+  #hello #talkclick #how3 {
+    width: 90%;
+  }
+  #hello #talkclick #hi3:hover,
+  #hello #talkclick #live3:hover,
+  #hello #talkclick #how3:hover {
+    transform: scale(1);
+  }
+  #hello #talkclick #hi3:active,
+  #hello #talkclick #live3:active,
+  #hello #talkclick #how3:active {
+    color: white;
+    background-color: #7a6048;
+  }
+  #hello #talkclick #hi4,
+  #hello #talkclick #live4,
+  #hello #talkclick #how4 {
+    width: 90%;
+  }
+  #hello #talkclick #hi4:hover,
+  #hello #talkclick #live4:hover,
+  #hello #talkclick #how4:hover {
+    transform: scale(1);
+  }
+  #hello #talkclick #hi4:active,
+  #hello #talkclick #live4:active,
+  #hello #talkclick #how4:active {
+    color: white;
+    background-color: #7a6048;
+  }
+  #hello #talkclick #hi5,
+  #hello #talkclick #live5,
+  #hello #talkclick #how5 {
+    width: 90%;
+  }
+  #hello #talkclick #hi5:hover,
+  #hello #talkclick #live5:hover,
+  #hello #talkclick #how5:hover {
+    transform: scale(1);
+  }
+  #hello #talkclick #hi5:active,
+  #hello #talkclick #live5:active,
+  #hello #talkclick #how5:active {
+    color: white;
+    background-color: #7a6048;
+  }
+  header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+  header .web_title {
+    padding: 10px;
+  }
+  header .web_title h1 {
+    font-size: 26px;
+  }
+  header .web_title a {
+    display: block;
+  }
+  [id^=dialog] {
+    padding: 10px;
+    width: 90% !important;
+    max-height: 400px !important;
+    overflow: auto;
+  }
+  [id^=dialog] #artname {
+    font-size: 20px;
+    width: auto;
+  }
+  [id^=dialog] #introduction {
+    width: auto;
+  }
+  #tabs {
+    margin-top: 70px;
+  }
+  #tabs ul {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 45px;
+  }
+  #tabs ul li {
+    padding: 0 0;
+    border-bottom: #d5c4a9 solid 1px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  #tabs ul li:active {
+    cursor: pointer;
+    color: #7a6048;
+    background-color: #d5c4a9;
+  }
+  #tabs ul li:hover {
+    cursor: pointer;
+    color: #7a6048;
+    background-color: #d5c4a9;
+  }
+  #tabs ul li a {
+    font-size: 16px;
+  }
+  #tabs ul li a:hover::before {
+    content: "";
+  }
+  #tabs [id^=tabs-] .allwork {
+    display: block;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint {
+    float: none;
+    margin: 0;
+    margin-bottom: 80px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint .picture {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    max-height: none;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint .btnmar {
+    margin: 0px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint .btnmar:hover {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=PaintPage.css.map */

@@ -1,0 +1,292 @@
+@import "reset";
+@import "variable";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+header {
+  .web_title {
+    background-color: $mian-color;
+    text-align: center;
+    padding: 25px;
+
+    h1 {
+      font-family: Harlow Solid;
+      font-size: $fz-xxl;
+    }
+  }
+}
+
+.bar {
+  max-width: 1920px;
+  background-color: $secondary-color;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10%;
+
+  #artist {
+    max-width: 200px;
+    padding: 20px 10px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    .artist-name {
+      height: 80px;
+      padding: 0 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        color: $mian-color;
+        text-align: center;
+        font-family: comic sans ms;
+        font-size: $fz-l;
+      }
+    }
+
+    .pic {
+      overflow: hidden;
+      border-radius: 50px 5px 0px 0px;
+
+      .picture {
+        width: 100%;
+        height: auto;
+        align-self: center;
+
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.8s;
+        }
+      }
+    }
+
+    .button {
+      border-radius: 0px 0px 5px 5px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $third-color;
+      width: 100%;
+
+      .btn_painter {
+        font-family: cambria;
+        font-size: $fz-m;
+        text-align: center;
+        padding: 15px;
+        float: left;
+        cursor: pointer;
+      }
+
+      &:hover {
+        color: brown;
+        background-color: #fae19d;
+      }
+    }
+  }
+
+  .i-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(122, 96, 72, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  #i1,
+  #i2,
+  #i3,
+  #i4,
+  #i5 {
+    display: none;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid $third-color;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 8px 8px 8px rgb(0 0 0 / 30%);
+
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    #introTitle {
+      font-weight: bold;
+      font-family: comic sans ms;
+      font-size: 20px;
+    }
+
+    .introTitle_btn {
+      border: 1px solid black;
+      padding: 4px;
+      border-radius: 4px;
+      margin: 4px;
+      cursor: pointer;
+      color: $mian-color;
+      background-color: $secondary-color;
+
+      &:hover {
+        color: $secondary-color;
+        background-color: $mian-color;
+      }
+    }
+
+    [id^="close"] {
+      float: right;
+    }
+
+    [id^="arwk"] {
+      float: left;
+    }
+  }
+}
+
+
+.content {
+  padding: 15px 0;
+  background-color: #fdf8ec;
+  max-width: 1920px;
+  height: auto;
+
+  #carouselExampleFade {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+
+footer {
+  background-color: #d5c4a9;
+  color: $secondary-color;
+  text-align: center;
+  padding: 15px;
+  height: 60px;
+  width: 100%;
+}
+
+
+@media(max-width: 767px) {
+  header {
+    .web_title {
+      padding: 12px;
+
+      h1 {
+        font-size: $fz-xl;
+      }
+    }
+  }
+
+  .bar {
+    max-width: 767px;
+    padding: 0 5%;
+
+    #artist {
+      max-width: 250px;
+      padding: 20px 20px;
+
+      .artist-name {
+        h4 {
+          font-size: $fz-m;
+        }
+      }
+    }
+
+    #i1,
+    #i2,
+    #i3,
+    #i4,
+    #i5 {
+      max-width: 450px;
+      width: 80%;
+      overflow: auto;
+    }
+  }
+
+  .content {
+    max-width: 767px;
+
+    #carouselExampleFade {
+      max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  header {
+    .web_title {
+      padding: 10px;
+
+      h1 {
+        font-size: $fz-l;
+      }
+    }
+  }
+
+  .bar {
+    #artist {
+      .pic {
+        .picture {
+          &:active {
+            transform: scale(1.2);
+            transition: 0.8s;
+          }
+        }
+      }
+
+      .button {
+        &:active {
+          color: brown;
+          background-color: #fae19d;
+        }
+      }
+    }
+
+    #i1,
+    #i2,
+    #i3,
+    #i4,
+    #i5 {
+      width: 90%;
+      height: 450px;
+      overflow: auto;
+
+      [id^="close"],
+      [id^="arwk"] {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .content {
+    max-width: 414px;
+
+    #carouselExampleFade {
+      max-width: 100%;
+    }
+  }
+}

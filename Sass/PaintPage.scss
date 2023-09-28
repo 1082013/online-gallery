@@ -1,0 +1,699 @@
+@import "reset";
+@import "variable";
+
+$max: 5;
+
+%btnHover-scale {
+  transform: scale(1.3);
+}
+
+%img-left {
+  float: left;
+}
+
+%img-h350 {
+  height: 350px;
+}
+
+%border-1 {
+  border: #7a6048 solid 2px;
+}
+
+
+@mixin maxWidth($w) {
+  max-width: $w;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(253, 248, 236);
+}
+
+.car,
+.msg {
+  width: 55px;
+  transition: all 0.3s;
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+
+  &:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+  }
+}
+
+.car {
+  right: 90px;
+}
+
+.msg {
+  right: 15px;
+}
+
+//愛心購物車
+#collect {
+  position: fixed;
+  bottom: 100px;
+  right: 90px;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 8px;
+  width: 300px;
+  display: none;
+  box-shadow: 8px 8px 8px rgb(0 0 0 / 20%);
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+
+  [id^="col-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Heart {
+      display: inline-flex;
+      align-items: center;
+      height: 25px;
+    }
+  }
+
+}
+
+//對話框
+#hello {
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 8px;
+  width: 320px;
+  height: 430px;
+  display: none;
+  box-shadow: 8px 8px 8px rgb(0 0 0 / 20%);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+
+  @for $i from 1 through $max {
+    #paintername#{$i} {
+      height: 20px;
+      margin: 5px 0;
+      text-align: center;
+    }
+  }
+
+  #talk1,
+  #talk2,
+  #talk3,
+  #talk4,
+  #talk5 {
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    overflow: auto;
+    height: 320px;
+
+    .talk-intro {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .picture {
+        @extend %img-left;
+        width: 75px;
+        height: 100px;
+      }
+    }
+  }
+
+  #talkclick {
+    margin-top: 20px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .btntalk {
+      padding: 5px;
+      color: antiquewhite;
+      background-color: darkgoldenrod;
+      border-radius: 5px;
+      border: 0px;
+      margin: 1px;
+      cursor: pointer;
+
+      &:hover {
+        @extend %btnHover-scale;
+      }
+    }
+  }
+}
+
+//彈跳視窗的close按鈕不要出現
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
+  display: none;
+  border: 0px;
+}
+//分頁introduction
+[id^="dialog"] {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  padding: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  #artname {
+    font-size: $fz-m;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 500px;
+    margin-bottom: 10px;
+  }
+
+  #introduction {
+    width: 500px;
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  button{
+    float: right;
+  }
+}
+
+
+header {
+  .web_title {
+    background-color: $third-color;
+    text-align: center;
+    padding: 25px;
+    cursor: pointer;
+    position: relative;
+
+    h1 {
+      font-family: Harlow Solid;
+      font-size: $fz-xxl;
+      margin: 0 40px;
+      width: 0 200px;
+    }
+
+    a {
+      display: none;
+
+      #menu {
+        color: $secondary-color;
+        width: 30px;
+        margin: 10px 20px;
+        position: absolute;
+        right: 0px;
+        top: -2px;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+//不同畫家畫作頁面
+#tabs {
+  width: 100%;
+  margin: auto;
+
+  ul {
+    background-color: $secondary-color ;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    li {
+      padding: 0 25px;
+
+      a {
+        color: $mian-color;
+        font-size: $fz-m;
+        font-family: Palatino Linotype;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+
+        &:hover {
+          &::before {
+            content: '◆　';
+            font-size: 15px;
+            position: absolute;
+            left: -20px;
+            top: 15px;
+            color: lightsalmon;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  [id^="tabs-"] {
+    width: 80%;
+    margin: 0 auto;
+
+    .tabs-painter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: $third-color solid 2px;
+      border-top: $third-color solid 2px;
+      border-radius: 20px;
+      padding: 10px;
+      background-color: rgba(213, 196, 169, 0.5);
+      margin-bottom: 50px;
+
+      .tab-left {
+        padding: 10px;
+
+        img {
+          width: 200px;
+          border-radius: 5px;
+        }
+      }
+
+      .tab-right {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .title {
+          font-size: 30px;
+          color: #7a6048;
+          font-family: comic sans ms;
+          text-decoration-line: underline;
+          padding: 15px;
+          padding-bottom: 0px;
+        }
+
+        p {
+          line-height: 1.5;
+          padding: 15px;
+
+        }
+      }
+    }
+
+    .allwork {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .allpaint {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+
+        h3 {
+          font-size: $fz-xs;
+          color: $secondary-color;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .picture {
+          @extend %img-left;
+          @extend %img-h350;
+          padding: 0 10px;
+
+        }
+
+        #picBig {
+          width: 750px;
+          max-width: 100%;
+          height: auto;
+        }
+
+        .share,
+        .love {
+          width: 45px;
+          height: 45px;
+          padding: 10px;
+          float: left;
+          cursor: pointer;
+        }
+
+        .btnmar {
+          margin: 10px;
+          float: right;
+          color: #7a6048;
+          border: 1px solid #7a6048;
+          border-radius: 3px;
+          padding: 3px 8px 3px 8px;
+          transition: all 0.3s;
+
+          &:hover {
+            @extend %btnHover-scale;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #d5c4a9;
+  color: $secondary-color;
+  text-align: center;
+  padding: 15px;
+  height: 60px;
+  width: 100%;
+}
+
+
+//js使用到的class
+.smallpicture {
+  width: 120px;
+  margin: 5px;
+}
+
+.hrtcart {
+  width: 20px;
+  height: 20px;
+  margin-left: 3px;
+}
+
+.btntalk {
+  padding: 5px;
+  color: antiquewhite;
+  background-color: darkgoldenrod;
+  border-radius: 5px;
+  border: 0px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+@media (max-width:767px) {
+
+  %w100-hauto {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    .web_title {
+      padding: 12px;
+
+      h1 {
+        font-size: $fz-xl;
+      }
+    }
+  }
+
+  //分頁introduction
+  [id^="dialog"] {
+    padding: 20px;
+
+    #artname {
+      width: 300px;
+    }
+
+    #introduction {
+      width: 300px;
+    }
+  }
+
+  #tabs {
+    ul {
+      flex-wrap: wrap;
+
+      li {
+        padding: 0 25px;
+
+        a {
+          font-size: $fz-xs;
+        }
+      }
+    }
+
+    [id^="tabs-"] {
+      width: 92%;
+
+      .tabs-painter {
+        flex-direction: column;
+
+        .tab-left {
+          img {
+            max-width: 100%;
+
+          }
+        }
+
+        .tab-right {
+          .title {
+            font-size: $fz-s;
+            text-align: center;
+          }
+
+          &::after {
+            content: "";
+          }
+        }
+      }
+
+      .allwork {
+        width: 100%;
+
+        .allpaint {
+
+          #pic-maxW1 {
+            @extend %w100-hauto;
+            @include maxWidth(532px);
+          }
+
+          #pic-maxW2 {
+            @extend %w100-hauto;
+            @include maxWidth(595px);
+          }
+
+          #pic-maxW3 {
+            @extend %w100-hauto;
+            @include maxWidth(429px);
+          }
+
+          #pic-maxW4 {
+            @extend %w100-hauto;
+            @include maxWidth(441.7px);
+          }
+
+          #pic-maxW5 {
+            @extend %w100-hauto;
+            @include maxWidth(496px);
+          }
+
+          #pic-maxW6 {
+            @extend %w100-hauto;
+            @include maxWidth(480px);
+          }
+
+          #pic-maxW7 {
+            @extend %w100-hauto;
+            @include maxWidth(408.8px);
+          }
+
+          #pic-maxW8 {
+            @extend %w100-hauto;
+            @include maxWidth(400px);
+          }
+
+          #pic-maxW9 {
+            @extend %w100-hauto;
+            @include maxWidth(451px);
+          }
+
+          #pic-maxW10 {
+            @extend %w100-hauto;
+            @include maxWidth(493.6px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:414px) {
+
+  .car,
+  .msg {
+    width: 44px;
+  }
+
+  .car {
+    bottom: 70px;
+    right: 15px;
+  }
+
+  #collect {
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: 2px -1px 10px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #hello {
+    width: 95%;
+    height: 480px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+
+    #talkclick {
+      margin-left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+
+      @for $i from 1 through $max {
+
+        #hi#{$i},
+        #live#{$i},
+        #how#{$i} {
+          width: 90%;
+
+          &:hover {
+            transform: scale(1);
+          }
+
+          &:active {
+            color: white;
+            background-color: #7a6048;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    .web_title {
+
+      padding: 10px;
+
+      h1 {
+        font-size: $fz-l;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  //分頁introduction
+  [id^="dialog"] {
+    padding: 10px;
+    width: 90% !important;    
+    max-height: 400px !important;
+    overflow: auto;
+
+    #artname {
+      font-size: $fz-xs;
+      width: auto;
+    }
+
+    #introduction {
+      width: auto;
+    }
+  }
+
+  #tabs {
+    margin-top: 70px;
+
+    ul {
+      flex-direction: column;
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 45px;
+
+      li {
+        padding: 0 0;
+        border-bottom: $third-color solid 1px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        &:active {
+          cursor: pointer;
+          color: $secondary-color;
+          background-color: $third-color;
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: $secondary-color;
+          background-color: $third-color;
+        }
+
+        a {
+          font-size: $fz-xxs;
+
+          &:hover {
+            &::before {
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+
+    [id^="tabs-"] {
+
+      .allwork {
+        display: block;
+
+        .allpaint {
+          float: none;
+          margin: 0;
+          margin-bottom: 80px;
+
+          .picture {
+            float: none;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            max-height: none;
+          }
+
+          .btnmar {
+            margin: 0px;
+
+            &:hover {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
