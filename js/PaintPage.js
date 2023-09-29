@@ -1,7 +1,10 @@
 $(document).ready(function () {
-  /*切換畫家作品分頁*/
+  /*切換畫家作品分頁&頁面滑到最上方*/
   $("#tabs").tabs({
-    event: "mouseover"
+    event: "mouseover",
+    activate: function(event, ui){
+      $('html,body').animate({scrollTop:0}, 0);
+    }
   });
 
   /*回首頁*/
@@ -168,6 +171,37 @@ $(document).ready(function () {
   var liveWord = ['Italy', 'Netherlands', 'Italy', 'Netherlands', 'Italy'];
   var howWord1 = ['How are you?', 'I like your paints.', 'I\'m your fan.', 'wellknow artwork?', 'I love you.'];
   var howWord2 = ['I\'m fine.Have a nice day.', 'Thank you!!!', 'Nice to meet you!!!', 'Het meisje met de parel.', 'Love you too!!!'];
+  //點擊對話Btn出現內容
+  function talk(count) {
+    $CountArray = count - 1;
+    $(`#hi${count}`).click(function () {
+      $(`#talk${count}`).append(`
+            <div class="btntalk" style="float: right; ">hi!!</div>
+            <br><br>
+            <div class="btntalk" style="float: left;">hello!!</div>
+            <br><br>
+          `);
+    })
+    $(`#live${count}`).click(function () {
+      $(`#talk${count}`).append(`
+            <div class="btntalk" style="float: right; ">where are you from?</div>
+            <br><br>
+            <div class="btntalk" style="float: left;">I am from ${liveWord[$CountArray]}.</div>
+            <br><br>
+          `);
+    })
+    $(`#how${count}`).click(function () {
+      $(`#talk${count}`).append(`
+            <div class="btntalk" style="float: right; ">${howWord1[$CountArray]}</div>
+            <br><br>
+            <div class="btntalk" style="float: left;">${howWord2[$CountArray]}</div>
+            <br><br>
+          `);
+    })
+  }
+  //初始頁面點擊對話Btn出現內容
+  talk(1);
+  //切換道不同頁籤內容更換與對話Btn點擊出現內容
   for (let i = 1; i <= 5; i++) {
     $(`#ui-id-${i}`).mouseover(function () {
       $('#hello').html(`
@@ -186,30 +220,7 @@ $(document).ready(function () {
             <button class="btntalk" id="how${i}">${painterWord[i - 1]}</button>
           </div>
         `)
-      $(`#hi${i}`).click(function () {
-        $(`#talk${i}`).append(`
-              <div class="btntalk" style="float: right; ">hi!!</div>
-              <br><br>
-              <div class="btntalk" style="float: left;">hello!!</div>
-              <br><br>
-            `);
-      })
-      $(`#live${i}`).click(function () {
-        $(`#talk${i}`).append(`
-              <div class="btntalk" style="float: right; ">where are you from?</div>
-              <br><br>
-              <div class="btntalk" style="float: left;">I am from ${liveWord[i - 1]}.</div>
-              <br><br>
-            `);
-      })
-      $(`#how${i}`).click(function () {
-        $(`#talk${i}`).append(`
-              <div class="btntalk" style="float: right; ">${howWord1[i - 1]}</div>
-              <br><br>
-              <div class="btntalk" style="float: left;">${howWord2[i - 1]}</div>
-              <br><br>
-            `);
-      })
+      talk(i);
     })
   }
 
@@ -240,7 +251,7 @@ $(document).ready(function () {
     //在新視窗中開啟分享鏈結
     window.open(shareUrl, '_blank');
   })
- 
+
 
   /*愛心購物車及menu在414px以上及以下的開啟與關閉方式*/
   const mediaQuery = window.matchMedia('(max-width: 414px)');
