@@ -414,11 +414,17 @@ header .web_title a #menu {
   margin: 10px;
   float: right;
   color: #7a6048;
+  background-color: #f0f0f0;
   border: 1px solid #7a6048;
   border-radius: 3px;
   padding: 3px 8px 3px 8px;
   transition: all 0.3s;
 }
+#tabs [id^=tabs-] .allwork .allpaint .btnmar:hover {
+  background-color: #d7d7d7;
+  cursor: pointer;
+}
+
 footer {
   background-color: #d5c4a9;
   color: #7a6048;
@@ -459,6 +465,10 @@ footer {
   }
   header .web_title h1 {
     font-size: 40px;
+  }
+  .car:hover,
+  .msg:hover {
+    transform: scale(1);
   }
   [id^=dialog] {
     padding: 20px;
@@ -526,6 +536,9 @@ footer {
   }
   #tabs [id^=tabs-] .allwork .allpaint #pic-maxW10 {
     max-width: 493.6px;
+  }
+  #tabs [id^=tabs-] .allwork .allpaint .btnmar:hover {
+    transform: scale(1);
   }
 }
 @media (max-width: 414px) {
@@ -716,8 +729,5 @@ footer {
   }
   #tabs [id^=tabs-] .allwork .allpaint .btnmar {
     margin: 0px;
-  }
-  #tabs [id^=tabs-] .allwork .allpaint .btnmar:hover {
-    transform: scale(1);
   }
 }/*# sourceMappingURL=PaintPage.css.map */

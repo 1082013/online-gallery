@@ -2,8 +2,8 @@ $(document).ready(function () {
   /*切換畫家作品分頁&頁面滑到最上方*/
   $("#tabs").tabs({
     event: "mouseover",
-    activate: function(event, ui){
-      $('html,body').animate({scrollTop:0}, 0);
+    activate: function (event, ui) {
+      $('html,body').animate({ scrollTop: 0 }, 0);
     }
   });
 
@@ -17,6 +17,15 @@ $(document).ready(function () {
   //audio.play();
   audio.volume = 0.1;
   audio.loop = true;
+
+  /*dialog初始設定*/
+  for (let i = 1; i <= 25; i++) {
+    $(`#dialog`).dialog({
+      autoOpen: false,
+      show: { duration: 1000 },
+      hide: { duration: 1000 }
+    });
+  };
 
   /*當滑鼠點擊到intro BTN ，介紹視窗顯示;點擊關閉則消失(包含dialog介紹視窗內的介紹文字變更)*/
   //各畫家畫作
@@ -306,15 +315,6 @@ $(document).ready(function () {
     }
 
     else {
-      /*dialog初始設定*/
-      for (let i = 1; i <= 25; i++) {
-        $(`#dialog`).dialog({
-          autoOpen: false,
-          show: { duration: 1000 },
-          hide: { duration: 1000 }
-        });
-      };
-
       //愛心購物車在414px的視窗以上以slide方式開關
       $('.car').off('click');
       $('.car').click(function () {

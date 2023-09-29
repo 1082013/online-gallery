@@ -390,13 +390,16 @@ header {
           margin: 10px;
           float: right;
           color: #7a6048;
+          background-color: #f0f0f0;
           border: 1px solid #7a6048;
           border-radius: 3px;
           padding: 3px 8px 3px 8px;
           transition: all 0.3s;
 
           &:hover {
+            background-color: darken(#f0f0f0, 10%);
             @extend %btnHover-scale;
+            cursor: pointer;
           }
         }
       }
@@ -450,6 +453,14 @@ footer {
       h1 {
         font-size: $fz-xl;
       }
+    }
+  }
+
+  .car,
+  .msg {
+
+    &:hover {
+      transform: scale(1);
     }
   }
 
@@ -559,6 +570,13 @@ footer {
           #pic-maxW10 {
             @extend %w100-hauto;
             @include maxWidth(493.6px);
+          }
+
+          .btnmar {
+
+            &:hover {
+              transform: scale(1);
+            }
           }
         }
       }
@@ -722,10 +740,6 @@ footer {
 
           .btnmar {
             margin: 0px;
-
-            &:hover {
-              transform: scale(1);
-            }
           }
         }
       }
