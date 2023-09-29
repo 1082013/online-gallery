@@ -12,7 +12,8 @@
 }
 
 @font-face {
-  font-family: "link Palatino Linotype";;
+  font-family: "link Palatino Linotype";
+  ;
   src: url(../SRC/Font/pala.ttf);
 }
 
@@ -103,6 +104,12 @@ body {
       align-items: center;
       height: 25px;
     }
+
+    @for $i from 1 through $max {
+      #P#{$i} {
+        text-align: center;
+      }
+    }
   }
 
 }
@@ -180,6 +187,7 @@ body {
   display: none;
   border: 0px;
 }
+
 //分頁introduction
 [id^="dialog"] {
   background-color: rgba(255, 255, 255, 0.9);
@@ -190,25 +198,33 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  #artname {
-    font-size: $fz-m;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 5px;
-    width: 500px;
-    margin-bottom: 10px;
+  #dia-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #artname {
+      font-size: $fz-m;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 5px;
+      width: 500px;
+      margin-bottom: 10px;
+    }
+
+    #introduction {
+      width: 500px;
+      line-height: 1.35;
+      text-indent: 2em;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100px;
+    }
   }
 
-  #introduction {
-    width: 500px;
-    line-height: 1.35;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  button{
-    float: right;
-  }
 }
 
 
@@ -441,12 +457,14 @@ footer {
   [id^="dialog"] {
     padding: 20px;
 
-    #artname {
-      width: 300px;
-    }
+    #dia-content {
+      #artname {
+        width: 300px;
+      }
 
-    #introduction {
-      width: 300px;
+      #introduction {
+        width: 300px;
+      }
     }
   }
 
@@ -625,17 +643,19 @@ footer {
   //分頁introduction
   [id^="dialog"] {
     padding: 10px;
-    width: 90% !important;    
+    width: 90% !important;
     max-height: 400px !important;
     overflow: auto;
 
-    #artname {
-      font-size: $fz-xs;
-      width: auto;
-    }
+    #dia-content {
+      #artname {
+        font-size: $fz-xs;
+        width: auto;
+      }
 
-    #introduction {
-      width: auto;
+      #introduction {
+        width: auto;
+      }
     }
   }
 
