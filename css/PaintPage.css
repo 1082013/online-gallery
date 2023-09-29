@@ -56,15 +56,15 @@ table {
 /* color */
 /* font-size */
 @font-face {
-  font-family: "Harlow Solid";
+  font-family: "header Harlow Solid";
   src: url(../SRC/Font/HARLOWSI.ttf);
 }
 @font-face {
-  font-family: "comic sans ms";
+  font-family: "PainterName comic";
   src: url(../SRC/Font/comic.ttf);
 }
 @font-face {
-  font-family: "Palatino Linotype";
+  font-family: "link Palatino Linotype";
   src: url(../SRC/Font/pala.ttf);
 }
 #tabs [id^=tabs-] .allwork .allpaint .btnmar:hover, #hello #talkclick .btntalk:hover {
@@ -267,7 +267,7 @@ header .web_title {
   position: relative;
 }
 header .web_title h1 {
-  font-family: Harlow Solid;
+  font-family: "header Harlow Solid";
   font-size: 52px;
   margin: 0 40px;
   width: 0 200px;
@@ -301,7 +301,7 @@ header .web_title a #menu {
 #tabs ul li a {
   color: #fdf8ec;
   font-size: 24px;
-  font-family: Palatino Linotype;
+  font-family: "link Palatino Linotype";
   text-decoration: none;
   position: relative;
   display: block;
@@ -348,7 +348,7 @@ header .web_title a #menu {
 #tabs [id^=tabs-] .tabs-painter .tab-right .title {
   font-size: 30px;
   color: #7a6048;
-  font-family: comic sans ms;
+  font-family: "PainterName comic";
   text-decoration-line: underline;
   padding: 15px;
   padding-bottom: 0px;

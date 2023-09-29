@@ -2,17 +2,17 @@
 @import "variable";
 
 @font-face {
-  font-family: "Harlow Solid";
+  font-family: "header Harlow Solid";
   src: url(../SRC/Font/HARLOWSI.ttf);
 }
 
 @font-face {
-  font-family: "comic sans ms";
+  font-family: "PainterName comic";
   src: url(../SRC/Font/comic.ttf);
 }
 
 @font-face {
-  font-family: "Palatino Linotype";;
+  font-family: "link Palatino Linotype";;
   src: url(../SRC/Font/pala.ttf);
 }
 
@@ -221,7 +221,7 @@ header {
     position: relative;
 
     h1 {
-      font-family: Harlow Solid;
+      font-family: "header Harlow Solid";
       font-size: $fz-xxl;
       margin: 0 40px;
       width: 0 200px;
@@ -260,7 +260,7 @@ header {
       a {
         color: $mian-color;
         font-size: $fz-m;
-        font-family: Palatino Linotype;
+        font-family: "link Palatino Linotype";
         text-decoration: none;
         position: relative;
         display: block;
@@ -317,7 +317,7 @@ header {
         .title {
           font-size: 30px;
           color: #7a6048;
-          font-family: comic sans ms;
+          font-family: "PainterName comic";
           text-decoration-line: underline;
           padding: 15px;
           padding-bottom: 0px;

@@ -55,15 +55,15 @@ table {
 /* color */
 /* font-size */
 @font-face {
-  font-family: "Harlow Solid";
+  font-family: "header Harlow Solid";
   src: url(../SRC/Font/HARLOWSI.TTF);
 }
 @font-face {
-  font-family: "comic";
+  font-family: "PainterName comic";
   src: url(../SRC/Font/comic.ttf);
 }
 @font-face {
-  font-family: "cambria";
+  font-family: "btn cambria";
   src: url(../SRC/Font/cambria.ttc);
 }
 *,
@@ -85,7 +85,7 @@ header .web_title {
   padding: 25px;
 }
 header .web_title h1 {
-  font-family: Harlow Solid;
+  font-family: "header Harlow Solid";
   font-size: 52px;
 }
 
@@ -118,7 +118,7 @@ header .web_title h1 {
 .bar #artist .artist-name h4 {
   color: #fdf8ec;
   text-align: center;
-  font-family: comic;
+  font-family: "PainterName comic";
   font-size: 26px;
 }
 .bar #artist .pic {
@@ -144,7 +144,7 @@ header .web_title h1 {
   width: 100%;
 }
 .bar #artist .button .btn_painter {
-  font-family: cambria;
+  font-family: "btn cambria";
   font-size: 24px;
   text-align: center;
   padding: 15px;

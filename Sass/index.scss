@@ -3,17 +3,17 @@
 
 
 @font-face {
-  font-family: "Harlow Solid";
+  font-family: "header Harlow Solid";
   src: url(../SRC/Font/HARLOWSI.TTF);
 }
 
 @font-face {
-  font-family: "comic";
+  font-family: "PainterName comic";
   src: url(../SRC/Font/comic.ttf);
 }
 
 @font-face {
-  font-family: "cambria";
+  font-family: "btn cambria";
   src: url(../SRC/Font/cambria.ttc);
 }
 
@@ -38,7 +38,7 @@ header {
     padding: 25px;
 
     h1 {
-      font-family: Harlow Solid;
+      font-family: "header Harlow Solid";
       font-size: $fz-xxl;
     }
   }
@@ -73,7 +73,7 @@ header {
       h4 {
         color: $mian-color;
         text-align: center;
-        font-family: comic;
+        font-family: "PainterName comic";
         font-size: $fz-l;
       }
     }
@@ -104,7 +104,7 @@ header {
       width: 100%;
 
       .btn_painter {
-        font-family: cambria;
+        font-family: "btn cambria";
         font-size: $fz-m;
         text-align: center;
         padding: 15px;
