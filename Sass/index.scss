@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: "Harlow Solid";
-  src: url("SRC/Font/HARLOWSI.ttf");
+  src: url(../SRC/Font/HARLOWSI.TTF);
 }
 
 @font-face {
-  font-family: "comic sans ms";
-  src: url("SRC/Font/comic.ttf");
+  font-family: "comic";
+  src: url(../SRC/Font/comic.ttf);
 }
 
 @font-face {
-  font-family: "ambria";;
-  src: url("SRC/Font/cambriab.ttf");
+  font-family: "cambria";
+  src: url(../SRC/Font/cambria.ttc);
 }
 
 *,
@@ -38,7 +38,7 @@ header {
     padding: 25px;
 
     h1 {
-      font-family: "Harlow Solid";
+      font-family: Harlow Solid;
       font-size: $fz-xxl;
     }
   }
@@ -73,7 +73,7 @@ header {
       h4 {
         color: $mian-color;
         text-align: center;
-        font-family: comic sans ms;
+        font-family: comic;
         font-size: $fz-l;
       }
     }
