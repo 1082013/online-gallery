@@ -83,12 +83,15 @@ body {
 //愛心購物車
 #collect {
   position: fixed;
+  z-index: 10;
   bottom: 100px;
   right: 90px;
   border: 2px solid white;
   border-radius: 8px;
   padding: 8px;
   width: 300px;
+  max-height: 500px;
+  overflow: auto;
   display: none;
   box-shadow: 8px 8px 8px rgb(0 0 0 / 20%);
   background-color: rgba(255, 255, 255, 0.9);

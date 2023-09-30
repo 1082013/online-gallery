@@ -88,11 +88,11 @@ $(document).ready(function () {
   }
   //畫家名字及畫作名
   var paint = [
-    ["Sandro Botticelli", "L\'Adorazione dei Magi", "Venus", "Nascita di Venere", "Primavera", "mythological painting"],
+    ["Sandro Botticelli", "Venus", "Primavera",  "Nascita di Venere","L\'Adorazione dei Magi", "mythological painting"],
     ["van Gogh", "割掉耳朵後的自畫像", "夜晚露天咖啡座", "十五朵向日葵", "星夜", "吃土豆的人"],
-    ["Da vinci", "達文西自畫像1", "蒙娜麗莎2", "抱貂女郎3", "最後的晚餐4", "安吉里之戰5"],
-    ["Jan Vermeer", "Het meisje met de parel", "De Melkmeid", "Femme tenant un luth", "Het glas wijn", "A Maid Asleep"],
-    ["Raphael", "聖喬治大戰惡龍", "聖母子與施洗者約翰1", "基督被解下十字架", "雅典學派", "聖禮的辯論"]
+    ["Da vinci", "達文西自畫像1", "蒙娜麗莎2", "安吉里之戰5", "抱貂女郎3", "最後的晚餐4"],
+    ["Jan Vermeer", "Het meisje met de parel", "De Melkmeid", "Femme tenant un luth", "A Maid Asleep", "Het glas wijn2"],
+    ["Raphael", "聖喬治大戰惡龍", "聖母子與施洗者約翰1", "基督被解下十字架2", "雅典學派", "聖禮的辯論"]
   ]
   for (let i = 1; i <= 25; i++) {
 
