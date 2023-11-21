@@ -79,3 +79,6 @@ HTML、SCSS（Sass）、JavaScript、RWD（響應式網頁設計）、Git 版本
 ## 關於作者
 **姓名：** 蔡容安 Rung-An Tsai  
 **電子郵件：** yhjhs92929.2016@gmail.com  
+
+## License
+online-gallery is released under MIT license. © 2023 蔡容安
